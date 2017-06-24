@@ -1,0 +1,39 @@
+Request URL: 
+http://blog.sina.cn/dpool/blog/newblog/riaapi/mblog/get_commentlist.php
+
+Parameter: 
+blogid=5d9eeb970102x2zj&pagesize=20&page=1&nightmode=0
+
+
+Http Request Header: 
+
+Host: blog.sina.cn
+Connection: keep-alive
+Content-Length: 54
+Origin: http://blog.sina.cn
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+Referer: http://blog.sina.cn/dpool/blog/s/blog_5d9eeb970100ncii.html
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: 
+
+
+======\\\\\ =========
+NOTE: looks like request header matters for the second request. 
+The page size is ignored. 
+The number of request could be calcuated by the first response of total number of comment. 
+
+The response is escaped unicode of json data. 
+
+TODO: 
+1. automatic download comments. 
+- additional: request url,  page title, post info, request timestampe,, number of comments as meta info. 
+2.  
+3. store data into json db. 
+4. covert escape data?
+5. display data? color code? Rank? 
+
+Maybe #4,5 could be done in client side. 
