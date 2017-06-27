@@ -16,6 +16,7 @@ native2ascii -encoding utf8 -reverse comment-2.txt comment-2-utf.txt
 - pretty print json 
 ```
 cat comment-2-utf.txt | python -m json.tool >pretty.txt
+native2ascii -encoding utf8 -reverse pretty.txt pretty-utf.txt;
 ```
 
 Connect the dots: 
