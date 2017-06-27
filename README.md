@@ -19,6 +19,11 @@ cat comment-2-utf.txt | python -m json.tool >pretty.txt
 native2ascii -encoding utf8 -reverse pretty.txt pretty-utf.txt;
 ```
 
+substring: 
+```
+cat comment-2.txt | sed  's/\(.*\)\(comment_total_count.*\)}}/\2/'| cut -f3 -d'"'
+```
+
 Connect the dots: 
   - Iterate to get all comments. 
   - link comments with content, the scraping meta info. 
