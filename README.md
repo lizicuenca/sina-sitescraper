@@ -10,11 +10,17 @@ Tool:
 For comment data: 
 - Shell script curl for getting comment data
 - Convert data from escaped unicode to utf: 
+```
 native2ascii -encoding utf8 -reverse comment-2.txt comment-2-utf.txt
+```
+- pretty print json 
+```
+cat comment-2-utf.txt | python -m json.tool >pretty.txt
+```
 
 Connect the dots: 
   - Iterate to get all comments. 
-  - link comments with content, the scaping time
+  - link comments with content, the scraping meta info. 
   - iterate the blogs
   - store data into db. 
   - style data in the way I need,
