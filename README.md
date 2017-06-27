@@ -36,7 +36,7 @@ cat sina-blog-list_20170623.csv |awk -F ',' '{print $1}' |cut -d '_' -f 2 |cut -
 Random sleeper to be more server friendly: 
 This will introduce a 1-30 second random sleep/pause in the script.  Can be handy at times.
 ```
-sleep $[ ( $RANDOM % 30 )  + 1 ]s
+echo $(date +'%T')  && sleep $[ ( $RANDOM % 30 )  + 1 ]s && echo $(date +'%T')
 ```
 
 TODO: 
