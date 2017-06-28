@@ -29,9 +29,12 @@ Get the comment for given blogid:
 ./testCurl.sh {blogid}
 ```
 
-Get commments for list of blogs from the csv file: 
+Get all commments for list of blogs from the csv file: 
 ```
 cat sina-blog-list_20170623.csv |awk -F ',' '{print $1}' |cut -d '_' -f 2 |cut -d '.' -f 1 | 
+cat sina-blog-list_20170623.csv |awk -F ',' '{print $1 $2}' |cut -d '_' -f 2 |cut -d '.' -f 1 | tail -346 > blogID.txt
+
+nohup ./GetBlogCommentByIdList.sh blogID.txt & 
 ```
 Random sleeper to be more server friendly: 
 This will introduce a 1-30 second random sleep/pause in the script.  Can be handy at times.
@@ -40,7 +43,7 @@ echo $(date +'%T')  && sleep $[ ( $RANDOM % 30 )  + 1 ]s && echo $(date +'%T')
 ```
 
 TODO: 
-  - Iterate to get all comments. 
+  - ~~Iterate to get all comments. ~~~
   - link comments with content, the scraping meta info. 
   - iterate the blogs and pull images. 
   - store data into db. 
