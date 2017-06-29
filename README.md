@@ -43,7 +43,7 @@ echo $(date +'%T')  && sleep $[ ( $RANDOM % 30 )  + 1 ]s && echo $(date +'%T')
 ```
 
 TODO: 
-  - ~~Iterate to get all comments. ~~~
+  - ~~Iterate to get all comments. ~~
   - link comments with content, the scraping meta info. 
   - iterate the blogs and pull images. 
   - store data into db. 
